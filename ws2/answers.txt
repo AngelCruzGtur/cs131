@@ -1,0 +1,47 @@
+Q1.git add notes.md && git commit -m "ws2: add task line"
+
+Q2.git log --oneline -3
+
+Q3.git log --oneline -3
+Bad commit short hash: <copy the hash next to "ws2: bad change">
+
+Q4.git revert 
+grep WRONG notes.md
+
+Q5.git rm --cached bigdata.bin
+echo "bigdata.bin" >> .gitignore
+git add .gitignore
+git commit --amend
+git push
+rm bigdata.bin
+
+Q6.git switch -c feature-summary
+
+Q7.printf "# Summary\nThis worksheet practices git commits, branches, diffs, merges, and fetch.\n" > summary.md
+git add summary.md
+gitcommit -m "ws2: add summary"
+
+Q8.git diff main..feature-summary -- summary.md
+
+Q9.git switch main
+git merge feature-summary
+ls summary.md
+
+Q10.git branch -d feature-summary
+
+Q11.git merge conflict-branch
+Conflicted file: summary.md
+
+Q12.git diff --name-only --diff-filter=U
+
+Q13.Edited summary.md, removed the conflict markers, and kept both update lines.
+
+Q14.git add summary.md
+git commit
+git log --oneline
+
+Q15.git fetch origin
+git log HEAD..origin/main --oneline
+
+Q16.git fetch downloads changes from the remote without changing my current branch, while only git just pull downloads changes
+ and merges them into my current branch.
